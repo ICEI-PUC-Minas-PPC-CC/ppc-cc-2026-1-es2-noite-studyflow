@@ -1,23 +1,19 @@
-# TÍTULO DO PROJETO
+# STUDY FLOW
 
-`CURSO`
+Ciência da Computação - Engenharia de Software II - Primeiro semestre de 2026
 
-`DISCIPLINA`
-
-`SEMESTRE`
-
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O StudyFlow é um software web de organização acadêmica que centraliza compromissos, cria agendas inteligentes e envia lembretes automáticos sobre tarefas, atividades e avaliações.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+- Henrique Luiz de Almeida Lopes
+- Flavio de Carvalho Cury
+- Caio Henrique Carvalho de Paiva
+- Luiz Felipe Loro Piva
 
 ## Orientador
 
-* Nome completo do professor 1
+Diego Roberto Gonçalves de Pontes
 
 ## Instruções de utilização
 
