@@ -1,10 +1,5 @@
 # Warmup Projeto
 
-**Caio Henrique Carvalho de Paiva**  
-**Luiz Felipe Piva**  
-**Flavio de Carvalho Cury**  
-**Henrique Luiz de Almeida Lopes**
-
 ## Escolha de uma funcionalidade principal
 
 Criação, edição, visualização e deleção de tarefas e provas com prioridade e status.
