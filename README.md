@@ -25,7 +25,7 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 <li><a href="docs/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
 <li><a href="docs/Warmup.md"> Warmup</a></li>
 <li><a href="docs/01-Sprint 1 - Análise dos requisitos e identificação das classes.md"> Sprint 1 - Análise dos requisitos e identificação das classes</a></li>
-<li><a href="docs/02-Especificação do Projeto.md"> Especificação do Projeto</a></li>
+<li><a href="docs/02-Sprint 2 - Modelagem de Classes e Relacionamentos.md"> Sprint 2 - Modelagem de Classes e Relacionamentos</a></li>
 <li><a href="docs/03-Metodologia.md"> Metodologia</a></li>
 <li><a href="docs/04-Projeto de Interface.md"> Projeto de Interface</a></li>
 <li><a href="docs/05-Arquitetura da Solução.md"> Arquitetura da Solução</a></li>
