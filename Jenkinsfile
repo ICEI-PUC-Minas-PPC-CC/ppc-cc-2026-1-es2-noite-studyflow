@@ -4,8 +4,9 @@ pipeline {
     stages {
 
         stage('Preparação') {
-            assert 2 + 2 == 4
+            
             steps {
+                assert 2 + 2 == 5
                 echo 'Iniciando pipeline'
             }
         }
