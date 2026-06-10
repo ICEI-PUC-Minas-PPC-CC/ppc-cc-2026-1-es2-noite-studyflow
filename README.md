@@ -10,6 +10,7 @@ O StudyFlow é um software web de organização acadêmica que centraliza compro
 - Flavio de Carvalho Cury
 - Caio Henrique Carvalho de Paiva
 - Luiz Felipe Loro Piva
+- Toguro
 
 ## Orientador
 
