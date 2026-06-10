@@ -21,7 +21,7 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Documentação
 
-<ol>
+<ul>
 <li><a href="docs/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
 <li><a href="docs/Warmup.md"> Warmup</a></li>
 <li><a href="docs/01-Sprint 1 - Análise dos requisitos e identificação das classes.md"> Sprint 1 - Análise dos requisitos e identificação das classes</a></li>
@@ -37,7 +37,7 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 <li><a href="docs/11-Registro de Testes de Usabilidade.md"> Registro de Testes de Usabilidade</a></li>
 <li><a href="docs/12-Apresentação do Projeto.md"> Apresentação do Projeto</a></li>
 <li><a href="docs/13-Referências.md"> Referências</a></li>
-</ol>
+</ul>
 
 # Código
 
