@@ -9,13 +9,11 @@ pipeline {
             }
         }
 
-        stage('Diagnostico') {
+        stage('Instalar Dependências') {
             steps {
-                bat 'whoami'
-                bat 'C:\\Python314\\python.exe -m pip list'
+                bat 'C:\\Python314\\python.exe -m pip install pytest'
             }
         }
-        
 
         stage('Testes') {
             steps {
