@@ -18,6 +18,7 @@ pipeline {
 
         stage('Testes') {
             steps {
+                bat 'python -m pytest'
                 echo 'Executando testes'
             }
         }
