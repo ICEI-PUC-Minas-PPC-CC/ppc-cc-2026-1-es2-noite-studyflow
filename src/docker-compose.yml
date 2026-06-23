@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:17.6
+    container_name: studyflow-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: studyflow
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    restart: always
+    volumes:
+      - studyflow-db-data:/var/lib/postgresql/data
+    networks:
+      - studyflow-db-network
+
+  adminer:
+    image: adminer:5.3.0
+    container_name: studyflow-db-adminer
+    restart: always
+    ports:
+      - "8081:8080"
+    networks:
+      - studyflow-db-network
+    depends_on:
+      - db
+
+networks:
+  studyflow-db-network:
+
+volumes:
+  studyflow-db-data:
