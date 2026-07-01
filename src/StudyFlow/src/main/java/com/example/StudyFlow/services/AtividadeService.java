@@ -6,17 +6,20 @@ import com.example.StudyFlow.repositories.AtividadeRepository;
 import com.example.StudyFlow.repositories.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class AtividadeService {
 
     private final AtividadeRepository atividadeRepository;
     private final UsuarioRepository usuarioRepository;
 
+    @Transactional
     public AtividadeResponse criar(AtividadeRequest request) {
         Usuario usuario = usuarioRepository.findById(request.getUsuarioId())
                 .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
@@ -68,6 +71,7 @@ public class AtividadeService {
                 .collect(Collectors.toList());
     }
 
+    @Transactional
     public AtividadeResponse atualizarStatus(UUID id, StatusRequest request) {
         Atividade atividade = atividadeRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Atividade não encontrada"));
@@ -76,6 +80,7 @@ public class AtividadeService {
         return toResponse(atividade);
     }
 
+    @Transactional
     public AtividadeResponse atualizarPrioridade(UUID id, PrioridadeRequest request) {
         Atividade atividade = atividadeRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Atividade não encontrada"));
@@ -84,6 +89,7 @@ public class AtividadeService {
         return toResponse(atividade);
     }
 
+    @Transactional
     public void deletar(UUID id) {
         if (!atividadeRepository.existsById(id)) {
             throw new RuntimeException("Atividade não encontrada");

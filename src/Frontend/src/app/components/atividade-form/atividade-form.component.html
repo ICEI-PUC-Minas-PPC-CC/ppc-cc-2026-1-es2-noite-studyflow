@@ -1,0 +1,70 @@
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow">
+      <div class="card-body p-4">
+        <h4 class="card-title mb-4">Nova Atividade</h4>
+
+        @if (erro) {
+          <div class="alert alert-danger py-2">{{ erro }}</div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label">Tipo</label>
+          <select class="form-select" [(ngModel)]="tipo">
+            <option value="TAREFA">Tarefa</option>
+            <option value="PROVA">Prova</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Titulo *</label>
+          <input type="text" class="form-control" [(ngModel)]="titulo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Descricao</label>
+          <textarea class="form-control" rows="2" [(ngModel)]="descricao"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Data *</label>
+          <input type="date" class="form-control" [(ngModel)]="data" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Prioridade</label>
+          <select class="form-select" [(ngModel)]="prioridade">
+            <option value="BAIXA">Baixa</option>
+            <option value="MEDIA">Media</option>
+            <option value="ALTA">Alta</option>
+          </select>
+        </div>
+
+        @if (tipo === 'TAREFA') {
+          <div class="mb-3">
+            <label class="form-label">Tipo da Tarefa</label>
+            <input type="text" class="form-control" [(ngModel)]="tipoDaTarefa" placeholder="Ex: Leitura, Exercicio" />
+          </div>
+        }
+
+        @if (tipo === 'PROVA') {
+          <div class="mb-3">
+            <label class="form-label">Disciplina</label>
+            <input type="text" class="form-control" [(ngModel)]="disciplina" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Nota Esperada</label>
+            <input type="number" class="form-control" step="0.1" [(ngModel)]="notaEsperada" />
+          </div>
+        }
+
+        <div class="d-flex justify-content-between">
+          <a routerLink="/atividades" class="btn btn-outline-secondary">Cancelar</a>
+          <button class="btn btn-primary" (click)="salvar()" [disabled]="salvando">
+            @if (salvando) { Salvando... } @else { Salvar }
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h4 class="mb-0">Minhas Atividades</h4>
+  <a routerLink="/atividades/nova" class="btn btn-primary">Nova Atividade</a>
+</div>
+
+@if (erro) {
+  <div class="alert alert-danger">{{ erro }}</div>
+}
+
+@if (carregando) {
+  <div class="text-center py-5">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Carregando...</span>
+    </div>
+    <p class="mt-2 text-muted">Carregando...</p>
+  </div>
+} @else if (atividades.length === 0) {
+  <div class="alert alert-info">Nenhuma atividade cadastrada.</div>
+} @else {
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>Titulo</th>
+          <th>Tipo</th>
+          <th>Data</th>
+          <th>Prioridade</th>
+          <th>Status</th>
+          <th>Acoes</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (atv of atividades; track atv.id) {
+          <tr>
+            <td>
+              <a [routerLink]="['/atividades', atv.id]" class="text-decoration-none">
+                {{ atv.titulo }}
+              </a>
+            </td>
+            <td>{{ atv.tipo === 'PROVA' ? 'Prova' : 'Tarefa' }}</td>
+            <td>{{ atv.data }}</td>
+            <td>
+              <span class="badge {{ prioridadeBadge(atv.prioridade) }}" role="button"
+                    (click)="alterarPrioridade(atv)" title="Clique para alterar">
+                {{ atv.prioridade }}
+              </span>
+            </td>
+            <td>
+              <span class="badge {{ statusBadge(atv.status) }}" role="button"
+                    (click)="alterarStatus(atv)" title="Clique para alterar">
+                {{ atv.status }}
+              </span>
+            </td>
+            <td>
+              <button class="btn btn-sm btn-outline-danger" (click)="excluir(atv.id)">Excluir</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+}

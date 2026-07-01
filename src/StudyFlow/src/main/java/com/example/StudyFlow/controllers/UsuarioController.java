@@ -27,4 +27,10 @@ public class UsuarioController {
         UsuarioResponse response = usuarioService.buscarPorId(id);
         return ResponseEntity.ok(response);
     }
+
+    @PostMapping("/login")
+    public ResponseEntity<UsuarioResponse> login(@RequestBody UsuarioRequest request) {
+        UsuarioResponse response = usuarioService.login(request);
+        return ResponseEntity.ok(response);
+    }
 }

@@ -37,6 +37,16 @@ public class UsuarioService {
         return toResponse(usuario);
     }
 
+    public UsuarioResponse login(UsuarioRequest request) {
+        if (request.getNome() == null || request.getNome().isBlank()) {
+            throw new IllegalArgumentException("Nome é obrigatório");
+        }
+
+        return usuarioRepository.findByNome(request.getNome())
+                .map(this::toResponse)
+                .orElseGet(() -> criar(request));
+    }
+
     private UsuarioResponse toResponse(Usuario usuario) {
         UsuarioResponse response = new UsuarioResponse();
         response.setId(usuario.getId());

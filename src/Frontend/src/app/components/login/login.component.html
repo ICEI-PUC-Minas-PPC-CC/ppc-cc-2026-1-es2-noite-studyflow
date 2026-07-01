@@ -1,0 +1,24 @@
+<div class="row justify-content-center mt-5">
+  <div class="col-md-4">
+    <div class="card shadow">
+      <div class="card-body p-4">
+        <h3 class="card-title text-center mb-4">StudyFlow</h3>
+        @if (erro) {
+          <div class="alert alert-danger py-2">{{ erro }}</div>
+        }
+        <div class="mb-3">
+          <label class="form-label">Nome</label>
+          <input type="text" class="form-control" [(ngModel)]="nome" placeholder="Seu nome" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Senha</label>
+          <input type="password" class="form-control" [(ngModel)]="senha" placeholder="Sua senha" />
+        </div>
+        <button class="btn btn-primary w-100" (click)="entrar()">Entrar / Cadastrar</button>
+        <p class="text-muted text-center mt-3 small">
+          Se o usuario nao existir, sera criado automaticamente.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

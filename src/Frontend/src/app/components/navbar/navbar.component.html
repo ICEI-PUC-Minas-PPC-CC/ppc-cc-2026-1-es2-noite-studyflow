@@ -1,0 +1,11 @@
+@if (auth.isLogado()) {
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container d-flex justify-content-between">
+      <a class="navbar-brand" routerLink="/atividades">StudyFlow</a>
+      <div>
+        <span class="text-light me-3">{{ auth.getUsuarioNome() }}</span>
+        <button class="btn btn-outline-light btn-sm" (click)="logout()">Sair</button>
+      </div>
+    </div>
+  </nav>
+}
