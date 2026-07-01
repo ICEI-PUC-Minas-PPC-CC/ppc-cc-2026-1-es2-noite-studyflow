@@ -25,7 +25,7 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 <li><a href="docs/Warmup.md"> Warmup</a></li>
 <li><a href="docs/01-Sprint 1 - Análise dos requisitos e identificação das classes.md"> Sprint 1 - Análise dos requisitos e identificação das classes</a></li>
 <li><a href="docs/02-Sprint 2 - Modelagem de Classes e Relacionamentos.md"> Sprint 2 - Modelagem de Classes e Relacionamentos</a></li>
-<li><a href="docs/03-Sprint 3 - Definição da Arquitetura do Sistema"> Sprint 3 - Definição da Arquitetura do Sistema </a></li>
+<li><a href="docs/03-Sprint 3 - Definição da Arquitetura do Sistema.md"> Sprint 3 - Definição da Arquitetura do Sistema </a></li>
 <li><a href="docs/04-Sprint 4 - Organizacao, Integracao e Planejamento do MVP.md"> Sprint 4 - Organizacao, Integracao e Planejamento do MVP </a></li>
 </ul>
 
