@@ -13,72 +13,72 @@
         </div>
       </div>
     } @else if (atividade) {
-      <div class="card shadow">
+      <div class="card shadow-sm border-0">
         <div class="card-body p-4">
-          <div class="d-flex justify-content-between align-items-start mb-3">
-            <h4 class="card-title mb-0">{{ atividade.titulo }}</h4>
+          <div class="d-flex justify-content-between align-items-start mb-4">
+            <h5 class="card-title fw-bold mb-0">{{ atividade.titulo }}</h5>
             <button class="btn btn-sm btn-outline-danger" (click)="excluir()">Excluir</button>
           </div>
 
-          <table class="table table-bordered">
-            <tr>
-              <th class="w-25">Tipo</th>
-              <td>{{ atividade.tipo === 'PROVA' ? 'Prova' : 'Tarefa' }}</td>
-            </tr>
-            <tr>
-              <th>Descricao</th>
-              <td>{{ atividade.descricao || '-' }}</td>
-            </tr>
-            <tr>
-              <th>Data</th>
-              <td>{{ atividade.data }}</td>
-            </tr>
-            <tr>
-              <th>Status</th>
-              <td>
-                <select class="form-select form-select-sm d-inline w-auto"
-                        [ngModel]="atividade.status"
-                        (ngModelChange)="alterarStatus($event)">
-                  <option value="PENDENTE">Pendente</option>
-                  <option value="EM_ANDAMENTO">Em Andamento</option>
-                  <option value="CONCLUIDO">Concluido</option>
-                  <option value="ADIADO">Adiado</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <th>Prioridade</th>
-              <td>
-                <select class="form-select form-select-sm d-inline w-auto"
-                        [ngModel]="atividade.prioridade"
-                        (ngModelChange)="alterarPrioridade($event)">
-                  <option value="BAIXA">Baixa</option>
-                  <option value="MEDIA">Media</option>
-                  <option value="ALTA">Alta</option>
-                </select>
-              </td>
-            </tr>
-            @if (atividade.tipo === 'TAREFA') {
-              <tr>
-                <th>Tipo da Tarefa</th>
-                <td>{{ atividade.tipoDaTarefa || '-' }}</td>
-              </tr>
-            }
-            @if (atividade.tipo === 'PROVA') {
-              <tr>
-                <th>Disciplina</th>
-                <td>{{ atividade.disciplina || '-' }}</td>
-              </tr>
-              <tr>
-                <th>Nota Esperada</th>
-                <td>{{ atividade.notaEsperada ?? '-' }}</td>
-              </tr>
-              <tr>
-                <th>Nota Alcancada</th>
-                <td>{{ atividade.notaAlcancada ?? '-' }}</td>
-              </tr>
-            }
-          </table>
+          <div class="border-bottom pb-2 mb-3"></div>
+
+          <div class="row mb-3">
+            <div class="col-4 detail-label">Tipo</div>
+            <div class="col-8">{{ atividade.tipo === 'PROVA' ? 'Prova' : 'Tarefa' }}</div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-4 detail-label">Descricao</div>
+            <div class="col-8">{{ atividade.descricao || '-' }}</div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-4 detail-label">Data</div>
+            <div class="col-8">{{ atividade.data }}</div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-4 detail-label">Status</div>
+            <div class="col-8">
+              <select class="form-select form-select-sm w-auto"
+                      [ngModel]="atividade.status"
+                      (ngModelChange)="alterarStatus($event)">
+                <option value="PENDENTE">Pendente</option>
+                <option value="EM_ANDAMENTO">Em Andamento</option>
+                <option value="CONCLUIDO">Concluido</option>
+                <option value="ADIADO">Adiado</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-4 detail-label">Prioridade</div>
+            <div class="col-8">
+              <select class="form-select form-select-sm w-auto"
+                      [ngModel]="atividade.prioridade"
+                      (ngModelChange)="alterarPrioridade($event)">
+                <option value="BAIXA">Baixa</option>
+                <option value="MEDIA">Media</option>
+                <option value="ALTA">Alta</option>
+              </select>
+            </div>
+          </div>
+          @if (atividade.tipo === 'TAREFA') {
+            <div class="row mb-3">
+              <div class="col-4 detail-label">Tipo da Tarefa</div>
+              <div class="col-8">{{ atividade.tipoDaTarefa || '-' }}</div>
+            </div>
+          }
+          @if (atividade.tipo === 'PROVA') {
+            <div class="row mb-3">
+              <div class="col-4 detail-label">Disciplina</div>
+              <div class="col-8">{{ atividade.disciplina || '-' }}</div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-4 detail-label">Nota Esperada</div>
+              <div class="col-8">{{ atividade.notaEsperada ?? '-' }}</div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-4 detail-label">Nota Alcancada</div>
+              <div class="col-8">{{ atividade.notaAlcancada ?? '-' }}</div>
+            </div>
+          }
         </div>
       </div>
     }

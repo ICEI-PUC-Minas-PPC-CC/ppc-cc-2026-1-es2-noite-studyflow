@@ -1,1 +1,31 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --bs-primary: #4f46e5;
+  --bs-primary-rgb: 79, 70, 229;
+  --bs-dark: #1e293b;
+  --bs-dark-rgb: 30, 41, 59;
+  --bs-body-bg: #f8fafc;
+  --bs-body-color: #1e293b;
+  --bs-emphasis-color: #0f172a;
+  --bs-secondary-color: #64748b;
+  --bs-border-color: #e2e8f0;
+  --bs-success: #16a34a;
+  --bs-success-rgb: 22, 163, 74;
+  --bs-warning: #d97706;
+  --bs-warning-rgb: 217, 119, 6;
+  --bs-danger: #dc2626;
+  --bs-danger-rgb: 220, 38, 38;
+  --bs-info: #0891b2;
+  --bs-info-rgb: 8, 145, 178;
+  --bs-secondary: #64748b;
+  --bs-secondary-rgb: 100, 116, 139;
+  --bs-border-radius: 0.5rem;
+  --bs-border-radius-lg: 0.75rem;
+  --bs-font-sans-serif: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bs-body-bg);
+  min-height: 100vh;
+}

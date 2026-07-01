@@ -1,10 +1,10 @@
 @if (auth.isLogado()) {
-  <nav class="navbar navbar-dark bg-dark">
-    <div class="container d-flex justify-content-between">
-      <a class="navbar-brand" routerLink="/atividades">StudyFlow</a>
-      <div>
-        <span class="text-light me-3">{{ auth.getUsuarioNome() }}</span>
-        <button class="btn btn-outline-light btn-sm" (click)="logout()">Sair</button>
+  <nav class="navbar navbar-dark bg-dark border-bottom border-light border-opacity-10 shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" routerLink="/atividades">StudyFlow</a>
+      <div class="d-flex align-items-center gap-3">
+        <span class="text-light text-opacity-75 small">{{ auth.getUsuarioNome() }}</span>
+        <button class="btn btn-outline-light btn-sm px-3" (click)="logout()">Sair</button>
       </div>
     </div>
   </nav>

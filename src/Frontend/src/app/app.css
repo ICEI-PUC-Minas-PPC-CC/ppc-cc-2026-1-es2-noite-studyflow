@@ -1,0 +1,27 @@
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bs-body-bg);
+}
+
+.atividade-card {
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  border: 1px solid var(--bs-border-color);
+}
+
+.atividade-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  transform: translateY(-1px);
+}
+
+.detail-label {
+  color: var(--bs-secondary-color);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.form-label,
+.detail-label {
+  font-weight: 500;
+}
