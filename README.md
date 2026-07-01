@@ -22,27 +22,15 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 # Documentação
 
 <ul>
-<li><a href="docs/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
 <li><a href="docs/Warmup.md"> Warmup</a></li>
 <li><a href="docs/01-Sprint 1 - Análise dos requisitos e identificação das classes.md"> Sprint 1 - Análise dos requisitos e identificação das classes</a></li>
 <li><a href="docs/02-Sprint 2 - Modelagem de Classes e Relacionamentos.md"> Sprint 2 - Modelagem de Classes e Relacionamentos</a></li>
 <li><a href="docs/03-Sprint 3 - Definição da Arquitetura do Sistema"> Sprint 3 - Definição da Arquitetura do Sistema </a></li>
 <li><a href="docs/04-Sprint 4 - Organizacao, Integracao e Planejamento do MVP.md"> Sprint 4 - Organizacao, Integracao e Planejamento do MVP </a></li>
-<li><a href="docs/05-Arquitetura da Solução.md"> Arquitetura da Solução</a></li>
-<li><a href="docs/06-Template Padrão da Aplicação.md"> Template Padrão da Aplicação</a></li>
-<li><a href="docs/07-Programação de Funcionalidades.md"> Programação de Funcionalidades</a></li>
-<li><a href="docs/08-Plano de Testes de Software.md"> Plano de Testes de Software</a></li>
-<li><a href="docs/09-Registro de Testes de Software.md"> Registro de Testes de Software</a></li>
-<li><a href="docs/10-Plano de Testes de Usabilidade.md"> Plano de Testes de Usabilidade</a></li>
-<li><a href="docs/11-Registro de Testes de Usabilidade.md"> Registro de Testes de Usabilidade</a></li>
-<li><a href="docs/12-Apresentação do Projeto.md"> Apresentação do Projeto</a></li>
-<li><a href="docs/13-Referências.md"> Referências</a></li>
 </ul>
 
 # Código
 
-<li><a href="src/README.md"> Código Fonte</a></li>
+<li><a href="src/Frontend/"> Front-end</a></li>
+<li><a href="src/StudyFlow/"> Back-end</a></li>
 
-# Apresentação
-
-<li><a href="presentation/README.md"> Apresentação da solução</a></li>
